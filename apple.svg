@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="skin" x1="24" y1="17" x2="77" y2="91" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff7160" />
+      <stop offset=".48" stop-color="#e83d35" />
+      <stop offset="1" stop-color="#bd292b" />
+    </linearGradient>
+    <linearGradient id="leaf" x1="48" y1="8" x2="73" y2="24" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#77b94d" />
+      <stop offset="1" stop-color="#357d3f" />
+    </linearGradient>
+  </defs>
+  <path d="M49 27c-8-8-25-9-34 2-13 15-6 43 5 57 7 9 15 11 26 7 4-1 8-1 12 0 11 4 19 2 26-7 11-14 18-42 5-57-9-11-26-10-34-2-2 2-4 2-6 0Z" fill="url(#skin)" stroke="#a9272b" stroke-width="2" />
+  <path d="M50 27c1-8 0-14-3-18" fill="none" stroke="#70452c" stroke-linecap="round" stroke-width="5" />
+  <path d="M50 17C55 5 68 3 79 7c-2 12-12 20-27 16" fill="url(#leaf)" stroke="#28643a" stroke-linejoin="round" stroke-width="2" />
+  <path d="M58 19c5-5 10-8 16-9" fill="none" stroke="#c4dc79" stroke-linecap="round" stroke-width="2" />
+  <path d="M25 43c2-7 7-11 13-12" fill="none" stroke="#ffb1a0" stroke-linecap="round" stroke-width="4" opacity=".75" />
+</svg>

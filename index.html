@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#edf4ed" />
+    <meta name="description" content="숫자를 이어 합이 10의 배수가 되면 수확하는 1분 게임" />
+    <title>숫자 수확 | 1분 게임</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="숫자 수확 홈">
+          <span class="brand-mark" aria-hidden="true">🍏</span>
+          <span class="brand-name">한입 수확</span>
+        </a>
+        <span class="edition-label"><span class="edition-dot"></span> 오늘의 게임 · 01</span>
+      </header>
+
+      <main class="game-layout">
+        <section class="board-panel" aria-labelledby="game-title">
+          <div class="board-heading">
+            <div>
+              <p class="eyebrow">APPLE NUMBER GAME</p>
+              <h1 id="game-title">숫자 수확</h1>
+            </div>
+            <span class="grid-size">8 <span>×</span> 8</span>
+          </div>
+
+          <div class="board-frame">
+            <div id="board" class="number-grid" role="grid" aria-label="8 x 8 숫자 격자"></div>
+          </div>
+
+          <div class="board-caption">
+            <span class="caption-dot" aria-hidden="true"></span>
+            <p>인접한 숫자를 이어 합을 10의 배수로 맞춰보세요.</p>
+            <span class="cell-count">64칸</span>
+          </div>
+        </section>
+
+        <aside class="game-sidebar" aria-label="게임 현황">
+          <section class="timer-panel" aria-labelledby="timer-label">
+            <div class="timer-topline">
+              <span id="timer-label" class="panel-label">남은 시간</span>
+              <span class="timer-icon" aria-hidden="true">◷</span>
+            </div>
+            <output id="time-left" class="timer-value" aria-live="off">01:00</output>
+            <div
+              id="timer-track"
+              class="timer-track"
+              role="progressbar"
+              aria-label="남은 시간"
+              aria-valuemin="0"
+              aria-valuemax="60"
+              aria-valuenow="60"
+            >
+              <span id="timer-progress" class="timer-progress"></span>
+            </div>
+          </section>
+
+          <div class="score-row">
+            <section class="score-panel" aria-labelledby="score-label">
+              <span id="score-label" class="panel-label">내 점수</span>
+              <output id="score" class="score-value">0</output>
+            </section>
+            <section class="score-panel best-panel" aria-labelledby="best-label">
+              <span id="best-label" class="panel-label">최고 점수</span>
+              <output id="best-score" class="score-value">0</output>
+            </section>
+          </div>
+
+          <section id="sum-panel" class="sum-panel" aria-labelledby="sum-label">
+            <div class="sum-heading">
+              <span id="sum-label" class="panel-label">선택 합계</span>
+              <span class="sum-hint">10의 배수</span>
+            </div>
+            <output id="selection-sum" class="sum-value" aria-live="polite">0</output>
+          </section>
+
+          <p id="game-message" class="game-message" role="status" aria-live="polite">
+            시작 버튼을 눌러 수확을 시작하세요.
+          </p>
+
+          <button id="start-button" class="start-button" type="button">
+            <span>게임 시작</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+
+          <p class="score-note"><span aria-hidden="true">✳</span> 사과 한 칸을 비울 때마다 1점</p>
+        </aside>
+      </main>
+
+      <footer class="page-footer">
+        <span>한 판은 60초</span>
+        <span class="footer-separator" aria-hidden="true">/</span>
+        <span>최고 기록은 이 브라우저에 저장됩니다</span>
+      </footer>
+    </div>
+  </body>
+</html>
